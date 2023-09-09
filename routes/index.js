@@ -45,9 +45,6 @@ router.get("/match", async (ctx) => {
     if (proxy && data.url.includes("kuwo")) {
       data.proxyUrl = proxy + data.url.replace(/^http:\/\//, "http/");
     }
-    if (proxy && data.url.includes("google")) {
-      data.proxyUrl = proxy + data.url.replace(/^http:\/\//, "http/");
-    }
     ctx.body = {
       code: 200,
       message: "匹配成功",
